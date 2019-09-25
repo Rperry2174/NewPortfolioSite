@@ -21,7 +21,7 @@ function Scene() {
   const [page, setPage] = useState(0)
   const [shapes, setShapes] = useState([])
   // Switches scenes every 4 seconds
-  useEffect(() => void setInterval(() => setPage(i => (i + 1) % svgs.length), 3000), [])
+  useEffect(() => void setInterval(() => setPage(i => (i + 1) % svgs.length), 4500), [])
   // Converts current SVG into mesh-shapes: https://threejs.org/docs/index.html#examples/loaders/SVGLoader
   useEffect(() => void svgs[page].then(setShapes), [page])
   // This spring controls the background color animation
@@ -63,19 +63,28 @@ function App() {
       </div>
       <div class="resumes">
         <div class="previewContainer">
-          <div class="preview">
-          </div>
+          <img
+            class="preview"
+            src="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/professional_preview.png"
+          >
+          </img>
           <span class="caption">
             <p>Professional Resume</p>
           </span>
         </div>
         <div class="previewContainer">
-          <div class="preview">
-          </div>
+          <img
+            class="preview"
+            src="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/graphic_preview.png"
+          >
+          </img>
           <span class="caption">
             <p>Graphic Resume</p>
           </span>
         </div>
+      </div>
+      <div class="blog">
+        https://amplitude.com/blog
       </div>
     </div>
   )

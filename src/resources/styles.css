@@ -47,6 +47,14 @@ body {
   color: #fff8de;
 }
 
+.blog {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #fff8de;
+  background-color: grey;
+}
+
 .resumes {
   position: relative;
   width: 80%;

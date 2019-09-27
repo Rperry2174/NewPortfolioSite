@@ -50,102 +50,76 @@ function Scene() {
   )
 }
 
-function Card() {
-  var articles = {
-    'article': {
-      "color": "FEC006",
-      "title": "Snow in Turkey Brings Travel Woes",
-      "thumbnail": "",
-      "category": "News",
-      "excerpt": "Heavy snowstorm in Turkey creates havoc as hundreds of villages left without power, and hundreds of roads closed",
-      "date": new Date()
-    },
-    'article-1': {
-      "color": "2196F3",
-      "title": "Landslide Leaving Thousands Homeless",
-      "thumbnail": "",
-      "category": "News",
-      "excerpt": "An aburt landslide in the Silcon Valley has left thousands homeless and on the streets.",
-      "date": new Date()
-    },
-    'article-2': {
-      "color": "FE5621",
-      "title": "Hail the size of baseballs in New York",
-      "thumbnail": "",
-      "category": "News",
-      "excerpt": "A rare and unexpected event occurred today as hail the size of snowball hits New York citizens.",
-      "date": new Date()
-    },
-    'article-3': {
-      "color": "673AB7",
-      "title": "Earthquake destorying San Fransisco",
-      "thumbnail": "",
-      "category": "News",
-      "excerpt": "A massive earthquake just hit San Fransisco leaving behind a giant crater.",
-      "date": new Date()
-    }
+class CardHeader extends React.Component {
+  render() {
+    const { image } = this.props;
+    var style = {
+        backgroundImage: 'url(' + image + ')',
+    };
+    return (
+      <header style={style} id={image} className="card-header">
+      </header>
+    )
   }
+}
 
-  var styles = {
-    backgroundColor: '#' + 'ff0000'
-  };
+class Button extends React.Component {
+  render() {
+    return (
+      <button className="button button-primary">
+        <i className="fa fa-chevron-right"></i> Find out more
+      </button>
+    )
+  }
+}
 
-  return (
-    <div className="app">
-      <div className="container">
-        <div className="column">
-          <article className="article">
-            <h3 className="article__category">category</h3>
-            <img
-              class="preview"
-              src="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/professional_preview.png"
-            >
-            </img>
-            <h2 className="article__title">title</h2>
-            <p className="article__excerpt">exerpt</p>
-          </article>
-        </div>
+class CardBody extends React.Component {
+  render() {
+    return (
+      <div className="card-body">
+        <h2>{this.props.title}</h2>
       </div>
-    </div>
-  )
-};
+    )
+  }
+}
+
+class Card extends React.Component {
+  render() {
+    return (
+      <article className="card-container">
+        <div className="card">
+          <CardHeader image={this.props.image}/>
+          <CardBody title={this.props.title} text={'Kayaks crowd Three Sister Springs, where people and manatees maintain controversial coexistence'}/>
+        </div>
+      </article>
+    )
+  }
+}
 
 /** Main component */
 function App() {
   return (
-    <div class="main">
-      <div class="landing">
+    <div className="main">
+      <div className="landing">
         <Canvas invalidateFrameloop camera={{ fov: 90, position: [0, 0, 1800], rotation: [0, deg(-20), deg(180)], near: 0.1, far: 20000 }}>
           <ambientLight intensity={0.5} />
           <spotLight intensity={0.5} position={[300, 300, 4000]} />
           <Scene />
         </Canvas>
-        <span class="header">HI, <br/>I'M RYAN</span>
+        <span className="header">HI, <br/>I'M RYAN</span>
       </div>
-      <div class="resumes">
-        <div class="previewContainer">
-          <img
-            class="preview"
-            src="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/professional_preview.png"
-          >
-          </img>
-          <span class="caption">
-            <p>Professional Resume</p>
-          </span>
-        </div>
-        <div class="previewContainer">
-          <img
-            class="preview"
-            src="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/graphic_preview.png"
-          >
-          </img>
-          <span class="caption">
-            <p>Graphic Resume</p>
-          </span>
-        </div>
+      <div className="resumes">
+        <Card
+          title="Professional Resume"
+          image="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/professional_preview.png"
+        ></Card>
+        <Card
+          title="Graphic Resume"
+          image="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/graphic_preview.png"
+        ></Card>
       </div>
-      <div class="blog">
-        <Card></Card>
+      <div className="blog">
+        blog here
       </div>
     </div>
   )

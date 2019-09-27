@@ -9,7 +9,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #272727;
+  background-color: #f6f7f8;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -52,18 +52,28 @@ body {
   width: 100%;
   height: 100%;
   color: #fff8de;
-  background-color: grey;
+  display: flex;
+  flex-wrap: wrap;  /* Allow multiple lines */
+  justify-content: space-between;
+  margin: auto;
+  /* background-color: #ffd620; */
+  background-size: cover;
+  background-image: url('https://ryaperry-bucket.s3-us-west-2.amazonaws.com/polygonal_background_light_blue.png');
+  transform: scaleY(-1);
 }
 
 .resumes {
   position: relative;
-  width: 80%;
+  width: 100%;
   height: 100%;
   color: #fff8de;
   display: flex;
   flex-wrap: wrap;  /* Allow multiple lines */
   justify-content: space-between;
   margin: auto;
+  /* background-color: #ffd620; */
+  background-size: cover;
+  background-image: url('https://ryaperry-bucket.s3-us-west-2.amazonaws.com/polygonal_background_light_blue.png');
 }
 
 .previewContainer {

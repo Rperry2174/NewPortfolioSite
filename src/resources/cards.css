@@ -5,10 +5,22 @@
 } */
 
 .card-container {
-  width: 450px;
+  width: auto;
   height: auto;
   display: block;
   margin: auto auto;
+}
+
+.separator-container {
+  height: auto;
+  display: block;
+  margin: auto auto;
+}
+
+@media (max-width: 901px) {
+  .separator-container {
+    display: none;
+  }
 }
 
 .card {

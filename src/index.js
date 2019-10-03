@@ -108,18 +108,20 @@ function App() {
         </Canvas>
         <span className="header">HI, <br/>I'M RYAN</span>
       </div>
-      <div className="resumes">
-        <Card
-          title="Professional Resume"
-          image="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/professional_preview.png"
-        ></Card>
-        <Card
-          title="Graphic Resume"
-          image="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/graphic_preview.png"
-        ></Card>
-      </div>
-      <div className="blog">
-        blog here
+      <div className="resume-container">
+        <div className="resumes">
+          <Card
+            title="Professional Resume"
+            image="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/professional_preview.png"
+          ></Card>
+          <div className="separator-container">
+            <div className="seperator"></div>
+          </div>
+          <Card
+            title="Graphic Resume"
+            image="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/graphic_preview.png"
+          ></Card>
+        </div>
       </div>
     </div>
   )

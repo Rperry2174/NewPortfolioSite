@@ -6,6 +6,8 @@ import { Canvas } from 'react-three-fiber'
 import { useTransition, useSpring, a } from 'react-spring/three'
 import { svgs, colors, deg, doubleSide } from './resources/helpers'
 import './resources/cards.css'
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+
 
 /** This component renders a shape */
 function Shape({ shape, rotation, position, color, opacity, index }) {
@@ -127,4 +129,31 @@ function App() {
   )
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+function ProfessionalResume() {
+  return(
+    <div>
+      Professional Resume
+    </div>
+  )
+}
+
+const NoMatch = () => (
+    <div>
+        <h2>Whoops</h2>
+        <p>Sorry but {window.location.pathname} didn’t match any pages</p>
+    </div>
+);
+
+function FinalApp() {
+  return(
+    <Router>
+      <Switch>
+        <Route exact path="/" component={App}></Route>
+        <Route exact path="/professional-resume" component={ProfessionalResume}></Route>
+        <Route component={NoMatch} />
+      </Switch>
+    </Router>
+  )
+}
+
+ReactDOM.render(<FinalApp />, document.getElementById('root'))

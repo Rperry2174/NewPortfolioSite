@@ -5,6 +5,9 @@ import { Canvas } from 'react-three-fiber'
 // A React x-platform animation library: https://github.com/react-spring/react-spring
 import { useTransition, useSpring, a } from 'react-spring/three'
 import { svgs, colors, deg, doubleSide } from './resources/helpers'
+import './resources/cards.css'
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+
 
 /** This component renders a shape */
 function Shape({ shape, rotation, position, color, opacity, index }) {
@@ -49,45 +52,118 @@ function Scene() {
   )
 }
 
+class CardHeader extends React.Component {
+  render() {
+    const { image } = this.props;
+    var style = {
+        backgroundImage: 'url(' + image + ')',
+    };
+    return (
+      <header style={style} id={image} className="card-header">
+      </header>
+    )
+  }
+}
+
+class Button extends React.Component {
+  render() {
+    return (
+      <button className="button button-primary">
+        <i className="fa fa-chevron-right"></i> Find out more
+      </button>
+    )
+  }
+}
+
+class CardBody extends React.Component {
+  render() {
+    return (
+      <div className="card-body">
+        <h2>{this.props.title}</h2>
+      </div>
+    )
+  }
+}
+
+class Card extends React.Component {
+  render() {
+    return (
+      <article className="card-container">
+        <div className="card">
+          <CardHeader image={this.props.image}/>
+          <CardBody title={this.props.title} text={'Kayaks crowd Three Sister Springs, where people and manatees maintain controversial coexistence'}/>
+        </div>
+      </article>
+    )
+  }
+}
+
 /** Main component */
 function App() {
   return (
-    <div class="main">
-      <div class="landing">
+    <div className="main">
+      <div className="landing">
         <Canvas invalidateFrameloop camera={{ fov: 90, position: [0, 0, 1800], rotation: [0, deg(-20), deg(180)], near: 0.1, far: 20000 }}>
           <ambientLight intensity={0.5} />
           <spotLight intensity={0.5} position={[300, 300, 4000]} />
           <Scene />
         </Canvas>
-        <span class="header">HI, <br/>I'M RYAN</span>
+        <span className="header">HI, <br/>I'M RYAN</span>
       </div>
-      <div class="resumes">
-        <div class="previewContainer">
-          <img
-            class="preview"
-            src="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/professional_preview.png"
-          >
-          </img>
-          <span class="caption">
-            <p>Professional Resume</p>
-          </span>
+      <div className="resume-container">
+        <div className="resumes">
+          <Card
+            title="Professional Resume"
+            image="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/professional_preview.png"
+          ></Card>
+          <div className="separator-container">
+            <div className="seperator"></div>
+          </div>
+          <Card
+            title="Graphic Resume"
+            image="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/graphic_preview.png"
+          ></Card>
         </div>
-        <div class="previewContainer">
-          <img
-            class="preview"
-            src="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/graphic_preview.png"
-          >
-          </img>
-          <span class="caption">
-            <p>Graphic Resume</p>
-          </span>
-        </div>
-      </div>
-      <div class="blog">
-        https://amplitude.com/blog
       </div>
     </div>
   )
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+function ProfessionalResume() {
+  return(
+    <iframe
+      src="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/resume_35.pdf#zoom=70"
+      style={{ width: "100%", height:"100%", style:"border: none;"}}>
+    </iframe>
+  )
+}
+
+function GraphicResume() {
+  return(
+    <iframe
+      src="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/resume_35.pdf#zoom=70"
+      style={{ width: "100%", height:"100%", style:"border: none;"}}>
+    </iframe>
+  )
+}
+
+const NoMatch = () => (
+    <div>
+        <h2>Whoops</h2>
+        <p>Sorry but {window.location.pathname} didn’t match any pages</p>
+    </div>
+);
+
+function FinalApp() {
+  return(
+    <Router>
+      <Switch>
+        <Route exact path="/" component={App}></Route>
+        <Route exact path="/professional-resume" component={ProfessionalResume}></Route>
+        <Route component={NoMatch} />
+      </Switch>
+    </Router>
+  )
+}
+
+ReactDOM.render(<FinalApp />, document.getElementById('root'))

@@ -131,9 +131,19 @@ function App() {
 
 function ProfessionalResume() {
   return(
-    <div>
-      Professional Resume
-    </div>
+    <iframe
+      src="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/resume_35.pdf#zoom=70"
+      style={{ width: "100%", height:"100%", style:"border: none;"}}>
+    </iframe>
+  )
+}
+
+function GraphicResume() {
+  return(
+    <iframe
+      src="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/resume_35.pdf#zoom=70"
+      style={{ width: "100%", height:"100%", style:"border: none;"}}>
+    </iframe>
   )
 }
 

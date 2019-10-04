@@ -88,12 +88,14 @@ class CardBody extends React.Component {
 class Card extends React.Component {
   render() {
     return (
-      <article className="card-container">
-        <div className="card">
-          <CardHeader image={this.props.image}/>
-          <CardBody title={this.props.title} text={'Kayaks crowd Three Sister Springs, where people and manatees maintain controversial coexistence'}/>
-        </div>
-      </article>
+        <article className="card-container">
+          <a className="card-link" href="/professional-resume">
+            <div className="card">
+              <CardHeader image={this.props.image}/>
+              <CardBody title={this.props.title} text={'Kayaks crowd Three Sister Springs, where people and manatees maintain controversial coexistence'}/>
+            </div>
+          </a>
+        </article>
     )
   }
 }

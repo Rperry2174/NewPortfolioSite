@@ -183,40 +183,6 @@ div.header-major > span {
     font-size: 4em;
     width: 200px;
   }
-  a.bottom-left {
-    display: none;
-  }
-}
-
-a {
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  color: inherit;
-  position: absolute;
-  display: inline;
-  text-decoration: none;
-  z-index: 1;
-}
-
-a.top-left {
-  top: 60px;
-  left: 60px;
-}
-
-a.top-right {
-  top: 60px;
-  right: 60px;
-}
-
-a.bottom-left {
-  bottom: 60px;
-  left: 60px;
-}
-
-a.bottom-right {
-  bottom: 60px;
-  right: 60px;
 }
 
 canvas {

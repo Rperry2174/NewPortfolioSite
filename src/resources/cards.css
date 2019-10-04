@@ -9,6 +9,7 @@
   height: auto;
   display: block;
   margin: auto auto;
+  padding-top: 10px;
 }
 
 .separator-container {
@@ -23,6 +24,7 @@
   }
 }
 
+
 .card {
   width: 400px;
   height: auto;
@@ -30,6 +32,7 @@
   margin: auto auto;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
+
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   cursor: pointer;
@@ -45,6 +48,24 @@
   width: 100%;
   background-size: cover;
   color: #000000;
+}
+
+@media (max-width: 450px) {
+  .card {
+    width: 320px;
+    height: auto;
+    display: block;
+    margin: auto auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  .card-container {
+    margin-top: 0px;
+  }
+
+  .card-header {
+    height: 220px;
+  }
 }
 
 .card-header--title {

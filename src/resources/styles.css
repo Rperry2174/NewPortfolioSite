@@ -7,6 +7,8 @@ body,
 #root {
   width: 100%;
   height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   background-color: #f6f7f8;
@@ -31,6 +33,7 @@ body {
     sans-serif;
   color: black;
   -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
   background-color: #e4e0ef;
 }
 
@@ -72,6 +75,7 @@ body {
   width:100%;
   top: 10px;
   font-size: 35px;
+  margin-bottom: 50px;
   /* font-family: 'Josefin Sans', sans-serif; */
 }
 
@@ -82,14 +86,21 @@ body {
   flex-wrap: wrap;  /* Allow multiple lines */
   justify-content: space-between;
   margin: auto;
+  margin-top: 0px;
   padding: 20px;
   width:1300px;
   max-width: 1300px;
 }
 
+@media (max-width: 450px) {
+
+  .choose-resume {
+    margin-bottom: 20px;
+  }
+}
+
 .resume-container {
   width: 100%;
-  min-height: 800px;
   position: relative;
   display: flex;
   flex-wrap: wrap;  /* Allow multiple lines */
@@ -97,7 +108,8 @@ body {
   margin: auto;
   background-color: #e4e0ef;
   background-size: cover;
-  background-image: url("https://ryaperry-bucket.s3-us-west-2.amazonaws.com/smallest_icons.svg")
+  background-image: url("https://ryaperry-bucket.s3-us-west-2.amazonaws.com/smallest_icons.png");
+  min-height: 800px;
 }
 
 .seperator {
@@ -225,7 +237,8 @@ canvas {
 
 .scroll-container {
   position: absolute;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   top: 0px;
   width: 100%;
   height: 100vh;

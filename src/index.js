@@ -115,7 +115,7 @@ function App() {
       <div className="resume-container">
         <div className="resumes">
           <h1 className="choose-resume">
-          Choose A Resume
+          Choose a Resume
           </h1>
           <Card
             title="Professional Resume"

@@ -21,10 +21,6 @@ body,
   overflow: hidden;
 }
 
-#root {
-  overflow: auto;
-}
-
 body {
   position: fixed;
   overflow: hidden;

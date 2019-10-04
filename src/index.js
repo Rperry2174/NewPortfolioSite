@@ -113,6 +113,9 @@ function App() {
         <span className="header">HI, <br/>I'M RYAN</span>
       </div>
       <div className="resume-container">
+        <h1 className="choose-resume">
+          Choose A Resume
+        </h1>
         <div className="resumes">
           <Card
             title="Professional Resume"

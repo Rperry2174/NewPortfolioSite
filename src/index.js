@@ -8,7 +8,6 @@ import { svgs, colors, deg, doubleSide } from './resources/helpers'
 import './resources/cards.css'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
-
 /** This component renders a shape */
 function Shape({ shape, rotation, position, color, opacity, index }) {
   return (
@@ -134,7 +133,7 @@ function App() {
 function ProfessionalResume() {
   return(
     <iframe
-      src="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/resume_35.pdf#zoom=70"
+      src="http://docs.google.com/gview?url=https://ryaperry-bucket.s3-us-west-2.amazonaws.com/resume_35.pdf&embedded=true"
       style={{ width: "100%", height:"100%", style:"border: none;"}}>
     </iframe>
   )
@@ -143,8 +142,8 @@ function ProfessionalResume() {
 function GraphicResume() {
   return(
     <iframe
-      src="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/resume_35.pdf#zoom=70"
-      style={{ width: "100%", height:"100%", style:"border: none;", 'overflow-x': 'auto'}}>
+      src="http://docs.google.com/gview?url=https://ryaperry-bucket.s3-us-west-2.amazonaws.com/resume_35.pdf&embedded=true"
+      style={{ width: "100%", height:"100%", style:"border: none;"}}>
     </iframe>
   )
 }

@@ -51,19 +51,6 @@ function Scene() {
   )
 }
 
-class CardHeader extends React.Component {
-  render() {
-    const { image } = this.props;
-    var style = {
-        backgroundImage: 'url(' + image + ')',
-    };
-    return (
-      <header style={style} id={image} className="card-header">
-      </header>
-    )
-  }
-}
-
 class Button extends React.Component {
   render() {
     return (
@@ -74,11 +61,25 @@ class Button extends React.Component {
   }
 }
 
+class CardHeader extends React.Component {
+  render() {
+    const { image } = this.props;
+    var style = {
+        backgroundImage: 'url(' + image + ')',
+    };
+    return (
+      <header style={style} id={this.props.prefix + '-header'} className="card-header">
+      </header>
+    )
+  }
+}
+
+
 class CardBody extends React.Component {
   render() {
     return (
-      <div className="card-body">
-        <h2>{this.props.title}</h2>
+      <div className="card-body" id={this.props.prefix + '-body'}>
+        <h2 id={this.props.prefix + '-title'}>{this.props.title}</h2>
       </div>
     )
   }
@@ -87,11 +88,11 @@ class CardBody extends React.Component {
 class Card extends React.Component {
   render() {
     return (
-        <article className="card-container">
+        <article className="card-container" id={this.props.prefix + '-container'}>
           <a className="card-link" href="/professional-resume">
-            <div className="card">
-              <CardHeader image={this.props.image}/>
-              <CardBody title={this.props.title} text={'Kayaks crowd Three Sister Springs, where people and manatees maintain controversial coexistence'}/>
+            <div className="card" id={this.props.prefix + '-card'}>
+              <CardHeader image={this.props.image} prefix={this.props.prefix}/>
+              <CardBody title={this.props.title} prefix={this.props.prefix}/>
             </div>
           </a>
         </article>
@@ -117,12 +118,14 @@ function App() {
           Choose a Resume
           </h1>
           <Card
-            title="Professional Resume"
-            image="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/professional_preview.png"
-          ></Card>
-          <Card
             title="Graphic Resume"
             image="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/graphic_preview.png"
+            prefix="graphic"
+          ></Card>
+          <Card
+            title="Professional Resume"
+            image="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/professional_preview.png"
+            prefix="professional"
           ></Card>
         </div>
       </div>

@@ -89,7 +89,7 @@ class Card extends React.Component {
   render() {
     return (
         <article className="card-container" id={this.props.prefix + '-container'}>
-          <a className="card-link" href="/professional-resume">
+          <a className="card-link" href={this.props.href}>
             <div className="card" id={this.props.prefix + '-card'}>
               <CardHeader image={this.props.image} prefix={this.props.prefix}/>
               <CardBody title={this.props.title} prefix={this.props.prefix}/>
@@ -119,12 +119,14 @@ function App() {
           </h1>
           <Card
             title="Graphic Resume"
-            image="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/graphic_preview.png"
+            image="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/preview_graphic.02.png"
+            href="/graphic-resume"
             prefix="graphic"
           ></Card>
           <Card
             title="Professional Resume"
-            image="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/professional_preview.png"
+            image="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/preview_professional.02.png"
+            href="/professional-resume"
             prefix="professional"
           ></Card>
         </div>
@@ -136,7 +138,7 @@ function App() {
 function ProfessionalResume() {
   return(
     <iframe
-      src="http://docs.google.com/gview?url=https://ryaperry-bucket.s3-us-west-2.amazonaws.com/resume_35.pdf&embedded=true"
+      src="http://docs.google.com/gview?url=https://ryaperry-bucket.s3-us-west-2.amazonaws.com/professional_resume.11.pdf&embedded=true"
       style={{ width: "100%", height:"100%", style:"border: none;"}}>
     </iframe>
   )
@@ -145,7 +147,7 @@ function ProfessionalResume() {
 function GraphicResume() {
   return(
     <iframe
-      src="http://docs.google.com/gview?url=https://ryaperry-bucket.s3-us-west-2.amazonaws.com/resume_35.pdf&embedded=true"
+      src="http://docs.google.com/gview?url=https://ryaperry-bucket.s3-us-west-2.amazonaws.com/resume_37.pdf&embedded=true"
       style={{ width: "100%", height:"100%", style:"border: none;"}}>
     </iframe>
   )
@@ -164,6 +166,7 @@ function FinalApp() {
       <Switch>
         <Route exact path="/" component={App}></Route>
         <Route exact path="/professional-resume" component={ProfessionalResume}></Route>
+        <Route exact path="/graphic-resume" component={GraphicResume}></Route>
         <Route component={NoMatch} />
       </Switch>
     </Router>

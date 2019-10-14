@@ -102,6 +102,33 @@ class Card extends React.Component {
 
 /** Main component */
 function App() {
+
+  var graphicCard =
+    <Card
+      title="Graphic Resume"
+      image="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/preview_graphic.02.png"
+      href="/graphic-resume"
+      prefix="graphic"
+    ></Card>
+
+  var professionalCard =
+    <Card
+      title="Professional Resume"
+      image="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/preview_professional.02.png"
+      href="/professional-resume"
+      prefix="professional"
+    ></Card>
+
+  var card0;
+  var card1;
+  if (Math.random() < 0.5) {
+    card0 = graphicCard;
+    card1 = professionalCard;
+  } else {
+    card0 = professionalCard;
+    card1 = graphicCard;
+  }
+
   return (
     <div className="main">
       <div className="landing">
@@ -117,18 +144,8 @@ function App() {
           <h1 className="choose-resume">
           Choose a Resume
           </h1>
-          <Card
-            title="Graphic Resume"
-            image="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/preview_graphic.02.png"
-            href="/graphic-resume"
-            prefix="graphic"
-          ></Card>
-          <Card
-            title="Professional Resume"
-            image="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/preview_professional.02.png"
-            href="/professional-resume"
-            prefix="professional"
-          ></Card>
+          { card0 }
+          { card1 }
         </div>
       </div>
     </div>

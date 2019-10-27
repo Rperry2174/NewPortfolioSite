@@ -148,8 +148,8 @@ function App() {
           { card1 }
         </div>
       </div>
-      <div className="resume-container">
-        <div className="resumes">
+      <div className="blog-container">
+        <div className="blogs">
           <h1 className="choose-resume">
           Blog
           </h1>

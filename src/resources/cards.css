@@ -12,6 +12,20 @@
   padding: 10px;
 }
 
+.embedly-card {
+  width: 600px;
+  display: block;
+  margin: auto auto;
+  padding: 10px;
+}
+
+.embedly-card-hug {
+  padding: 5px !important;
+  background-color: white;
+  box-shadow: 0 6px 12px 0 rgba(0,0,0,0.35);
+  border-radius: 5px 5px 5px 5px;
+}
+
 .separator-container {
   height: auto;
   display: block;
@@ -31,7 +45,7 @@
   display: block;
   margin: auto auto;
   box-shadow: 0 6px 12px 0 rgba(0,0,0,0.35);
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 10px 10px 10px 10px;
 }
 
 .card:hover {
@@ -49,14 +63,14 @@
   width: 100%;
   background-size: cover;
   color: #000000;
-  border-radius: 15px 15px 0 0;
+  border-radius: 10px 10px 0 0;
 }
 
 .card-body {
   padding: 15px;
   background-color: #23b309;
   width: 100%;
-  border-radius: 0 0 15px 15px;
+  border-radius: 0 0 10px 10px;
 }
 
 @media (max-width: 450px) {
@@ -78,6 +92,22 @@
 
   .card-body {
     padding: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .embedly-card-hug {
+    width: 320px;
+    display: block;
+    margin: auto auto;
+    padding: 10px;
+  }
+
+  .embedly-card {
+      width: auto;
+      display: block;
+      margin: auto auto;
+      padding: 10px;
   }
 }
 

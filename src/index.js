@@ -148,6 +148,32 @@ function App() {
           { card1 }
         </div>
       </div>
+      <div className="resume-container">
+        <div className="resumes">
+          <h1 className="choose-resume">
+          Blog
+          </h1>
+
+          <blockquote class="embedly-card" id="snaplens">
+            <h4>
+              <a href="https://medium.com/better-marketing/how-to-make-a-joker-snapchat-lens-in-5-steps-1e4f248599e4">How To Make a "Joker" Snapchat Lens in 5 Steps</a>
+            </h4>
+            <p>And the case for why Snapchat lenses will become a bigger part of marketing strategies</p>
+          </blockquote>
+
+          <blockquote class="embedly-card" id="jon-snow">
+            <h4>
+              <a href="https://medium.com/better-programming/i-a-b-tested-resume-formats-which-jon-snow-gets-hired-cd206f62d15a">I A/B Tested Resume Formats: Which Jon Snow Gets Hired?</a>
+            </h4>
+            <p>Does colorful and graphic beat plain and professional?</p>
+          </blockquote>
+
+          <blockquote class="embedly-card" id="bootcamp-reflection">
+            <h4><a href="https://medium.com/better-programming/2-years-later-was-my-bootcamp-worth-it-ab65de0e06e2">Two Years Later... Was My Coding Bootcamp Worth It?</a></h4>
+              <p>My personal experience of learning to code in a bootcamp</p>
+          </blockquote>
+        </div>
+      </div>
     </div>
   )
 }

@@ -105,7 +105,7 @@ body {
   background-color: #e4e0ef;
   background-size: cover;
   background-image: url("https://ryaperry-bucket.s3-us-west-2.amazonaws.com/smallest_icons.png");
-  min-height: 800px;
+  min-height: 600px;
 }
 
 .seperator {

@@ -100,6 +100,41 @@ class Card extends React.Component {
   }
 }
 
+
+class Blog extends React.Component {
+  render() {
+    let image = this.props.blogPreviewImage
+    var style = {
+        backgroundImage: 'url(' + image + ')',
+    };
+
+    return (
+      <div className="blog-card-container">
+        <span
+          className="card-link"
+          onClick={()=> window.open(this.props.href, "_blank")}>
+          <div className="blog-card">
+            <span className="blog-header-container">
+              <img
+                className="blog-publisher-logo"
+                src={this.props.blogPublisherLogo}
+              >
+              </img>
+              <h4 className="blog-card-header">{this.props.blogPublisherName} - Ryan Perry</h4>
+            </span>
+            <div
+              style={style}
+              className="blog-card-image">
+            </div>
+            <h3 className="blog-title">{this.props.blogTitle}</h3>
+            <p className="blog-subtitle">{this.props.blogSubtitle}</p>
+          </div>
+        </span>
+      </div>
+    )
+  }
+}
+
 /** Main component */
 function App() {
 
@@ -153,25 +188,38 @@ function App() {
           <h1 className="choose-resume">
           Blog
           </h1>
-
-          <blockquote class="embedly-card" id="snaplens">
-            <h4>
-              <a href="https://medium.com/better-marketing/how-to-make-a-joker-snapchat-lens-in-5-steps-1e4f248599e4">How To Make a "Joker" Snapchat Lens in 5 Steps</a>
-            </h4>
-            <p>And the case for why Snapchat lenses will become a bigger part of marketing strategies</p>
-          </blockquote>
-
-          <blockquote class="embedly-card" id="jon-snow">
-            <h4>
-              <a href="https://medium.com/better-programming/i-a-b-tested-resume-formats-which-jon-snow-gets-hired-cd206f62d15a">I A/B Tested Resume Formats: Which Jon Snow Gets Hired?</a>
-            </h4>
-            <p>Does colorful and graphic beat plain and professional?</p>
-          </blockquote>
-
-          <blockquote class="embedly-card" id="bootcamp-reflection">
-            <h4><a href="https://medium.com/better-programming/2-years-later-was-my-bootcamp-worth-it-ab65de0e06e2">Two Years Later... Was My Coding Bootcamp Worth It?</a></h4>
-              <p>My personal experience of learning to code in a bootcamp</p>
-          </blockquote>
+          <Blog
+            href="https://medium.com/better-programming/2-years-later-was-my-bootcamp-worth-it-ab65de0e06e2"
+            blogPreviewImage="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/coding_meme.png"
+            blogTitle="Two Years Later… Was My Coding Bootcamp Worth It?"
+            blogSubtitle="My personal experience of learning to code in a bootcamp"
+            blogPublisherLogo="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/medium.png"
+            blogPublisherName="MEDIUM"
+          ></Blog>
+          <Blog
+            href="https://medium.com/better-programming/i-a-b-tested-resume-formats-which-jon-snow-gets-hired-cd206f62d15a"
+            blogPreviewImage="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/john_snow_vs.png"
+            blogTitle="I A/B Tested Resume Formats: Which Jon Snow Gets Hired?"
+            blogSubtitle="Does colorful and graphic beat plain and professional?"
+            blogPublisherLogo="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/medium.png"
+            blogPublisherName="MEDIUM"
+          ></Blog>
+          <Blog
+            href="https://medium.com/better-marketing/how-to-make-a-joker-snapchat-lens-in-5-steps-1e4f248599e4"
+            blogPreviewImage="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/how_to_make_a_snapchat_lens.png"
+            blogTitle="How To Make a “Joker” Snapchat Lens in 5 Steps"
+            blogSubtitle="And why Snapchat lenses will become a bigger part of marketing strategies"
+            blogPublisherLogo="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/medium.png"
+            blogPublisherName="MEDIUM"
+          ></Blog>
+          <Blog
+            href="https://medium.com/swlh/why-side-projects-are-so-important-48360746d4f0"
+            blogPreviewImage="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/why_side_projects_are_important-min.png"
+            blogTitle="Why Side Projects Are So Important"
+            blogSubtitle="And how to start them..."
+            blogPublisherLogo="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/medium.png"
+            blogPublisherName="MEDIUM"
+          ></Blog>
         </div>
       </div>
     </div>

@@ -197,6 +197,14 @@ function App() {
             blogPublisherName="MEDIUM"
           ></Blog>
           <Blog
+            href="https://medium.com/swlh/why-side-projects-are-so-important-48360746d4f0"
+            blogPreviewImage="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/why_side_projects_are_important-min.png"
+            blogTitle="Why Side Projects Are So Important"
+            blogSubtitle="And how to start them..."
+            blogPublisherLogo="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/medium.png"
+            blogPublisherName="MEDIUM"
+          ></Blog>
+          <Blog
             href="https://medium.com/better-programming/i-a-b-tested-resume-formats-which-jon-snow-gets-hired-cd206f62d15a"
             blogPreviewImage="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/john_snow_vs.png"
             blogTitle="I A/B Tested Resume Formats: Which Jon Snow Gets Hired?"
@@ -209,14 +217,6 @@ function App() {
             blogPreviewImage="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/how_to_make_a_snapchat_lens.png"
             blogTitle="How To Make a “Joker” Snapchat Lens in 5 Steps"
             blogSubtitle="And why Snapchat lenses will become a bigger part of marketing strategies"
-            blogPublisherLogo="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/medium.png"
-            blogPublisherName="MEDIUM"
-          ></Blog>
-          <Blog
-            href="https://medium.com/swlh/why-side-projects-are-so-important-48360746d4f0"
-            blogPreviewImage="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/why_side_projects_are_important-min.png"
-            blogTitle="Why Side Projects Are So Important"
-            blogSubtitle="And how to start them..."
             blogPublisherLogo="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/medium.png"
             blogPublisherName="MEDIUM"
           ></Blog>

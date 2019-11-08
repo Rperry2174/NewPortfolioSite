@@ -160,18 +160,20 @@
 }
 
 @media (max-width: 450px) {
-  .embedly-card-hug {
+  .blog-card {
     width: 320px;
+    height: auto;
     display: block;
     margin: auto auto;
-    padding: 10px;
+    box-shadow: 0 6px 12px 0 rgba(0,0,0,0.35);
+    border-radius: 5px 5px 5px 5px;
+    background-color: #ffffff;
+    padding: 8px;
   }
 
-  .embedly-card {
-      width: auto;
-      display: block;
-      margin: auto auto;
-      padding: 10px;
+  .blog-card-image {
+    height: 150px;
+    width: 305px;
   }
 }
 

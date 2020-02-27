@@ -7,7 +7,7 @@ const doubleSide = THREE.DoubleSide
 const deg = THREE.Math.degToRad
 const colors = ['#21242d', '#ea5158', '#0d4663', '#ffbcb7', '#2d4a3e', '#8bd8d2']
 const svgs = ['night', 'city', 'morning', 'tubes', 'woods', 'beach']
-  .map(name => `https://raw.githubusercontent.com/drcmda/react-three-fiber/master/examples/resources/images/svg/${name}.svg`)
+  .map(name => `https://raw.githubusercontent.com/drcmda/react-three-fiber/master/examples/src/resources/images/svg/${name}.svg`)
   .map(
     url =>
       new Promise(resolve =>

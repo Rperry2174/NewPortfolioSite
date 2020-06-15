@@ -197,6 +197,14 @@ function App() {
             blogPublisherName="MEDIUM"
           ></Blog>
           <Blog
+            href="https://medium.com/@rperry2174/what-i-learned-publishing-my-first-mobile-game-d73d09a52a4f"
+            blogPreviewImage="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/what-i-learned-publishing-my-first-mobile-game.png"
+            blogTitle="What I Learned Publishing My First Mobile Game"
+            blogSubtitle="And some statistics on how it performed"
+            blogPublisherLogo="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/medium.png"
+            blogPublisherName="MEDIUM"
+          ></Blog>
+	  <Blog
             href="https://medium.com/swlh/why-side-projects-are-so-important-48360746d4f0"
             blogPreviewImage="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/why_side_projects_are_important-min.png"
             blogTitle="Why Side Projects Are So Important"

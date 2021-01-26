@@ -189,6 +189,22 @@ function App() {
           Blog
           </h1>
           <Blog
+            href="https://medium.com/better-programming/how-to-debug-performance-issues-in-python-with-profilers-ae62ab9fe834"
+            blogPreviewImage="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/flame_graph_medium_preview.png"
+            blogTitle="How To Debug Performance Issues in Python With Profilers"
+            blogSubtitle="Using flame graphs to get to the root of the problem"
+            blogPublisherLogo="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/medium.png"
+            blogPublisherName="MEDIUM"
+          ></Blog>
+          <Blog
+            href="https://medium.com/better-programming/github-replacing-master-with-main-is-a-huge-win-for-inclusion-in-tech-bf517478275b"
+            blogPreviewImage="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/github_replacing_preview_image.png"
+            blogTitle="Github Replacing “Master” With “Main” is a Huge Win for Inclusion"
+            blogSubtitle="The little things are the big things"
+            blogPublisherLogo="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/medium.png"
+            blogPublisherName="MEDIUM"
+          ></Blog>
+          <Blog
             href="https://medium.com/better-programming/2-years-later-was-my-bootcamp-worth-it-ab65de0e06e2"
             blogPreviewImage="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/coding_meme.png"
             blogTitle="Two Years Later… Was My Coding Bootcamp Worth It?"
@@ -204,7 +220,7 @@ function App() {
             blogPublisherLogo="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/medium.png"
             blogPublisherName="MEDIUM"
           ></Blog>
-	  <Blog
+	        <Blog
             href="https://medium.com/swlh/why-side-projects-are-so-important-48360746d4f0"
             blogPreviewImage="https://ryaperry-bucket.s3-us-west-2.amazonaws.com/why_side_projects_are_important-min.png"
             blogTitle="Why Side Projects Are So Important"

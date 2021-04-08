@@ -7,7 +7,7 @@ const doubleSide = THREE.DoubleSide
 const deg = THREE.Math.degToRad
 const colors = ['#21242d', '#ea5158', '#0d4663', '#ffbcb7', '#2d4a3e', '#8bd8d2']
 const svgs = ['night', 'city', 'tubes', 'woods', 'beach']
-  .map(name => `https://rperry2174-portfolio-assets.s3-us-west-2.amazonaws.com/${name}.svg`)
+  .map(name => `./${name}.svg`)
   .map(
     url =>
       new Promise(resolve =>
